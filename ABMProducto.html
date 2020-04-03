@@ -11,6 +11,37 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+  <div class="container">
+    <!-- Image and text -->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" width="35" height="30" class="d-inline-block align-top" alt="Logo">
+            Merca2Libre
+            </a>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                <a class="nav-link active" href="#">Iniciar Sesión</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="col-sm-3">
+                <ul class="nav flex-column nav-fill nav-pills">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Mis tiendas</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Navegar</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-sm-9">
     <div class="container">
     <div class="container">
         <h1 class="mx-auto">Productos por tienda</h1>
@@ -58,6 +89,7 @@
             <th scope="col">Cantidad</th>
             <th scope="col">Precio</th>
             <th scope="col">Editar Producto</th>
+            <th scope="col">Eliminar Producto</th>
           </tr>
         </thead>
         <tbody>
@@ -66,18 +98,21 @@
             <td>30</td>
             <td>$65</td>
             <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editarProductoModal">Editar</button></td>
+            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarProductoModal">Eiminar</button></td>
           </tr>
           <tr>
             <th scope="row">Cocaina</th>
             <td>75</td>
             <td>$1200</td>
             <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editarProductoModal">Editar</button></td>
+            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarProductoModal">Eiminar</button></td>
           </tr>
           <tr>
             <th scope="row">Marihuana</th>
             <td>50</td>
             <td>$599.99</td>
             <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editarProductoModal">Editar</button></td>
+            <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#eliminarProductoModal">Eiminar</button></td>
           </tr>
         </tbody>
       </table>
@@ -115,6 +150,31 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="eliminarProductoModal" tabindex="-1" role="dialog" aria-labelledby="eliminarProductoLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="eliminarProductoLabel">Eliminar Producto</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              ¿Estás seguro de querer eliminar este producto?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Si</button>
+            <button type="button" class="btn btn-secondary">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+</div>
     
 </body>
 </html>
