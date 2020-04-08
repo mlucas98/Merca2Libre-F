@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Productos por Tienda</title>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -88,21 +88,26 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th class="ancho-80" scope="col">Nombre</th>
+                  <th class="ancho-70" scope="col">Nombre</th>
+                  <th class="ancho-10" scope="col"></th>
                   <th class="ancho-10" scope="col"></th>
                   <th class="ancho-10" scope="col"></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="tbody">
                 <tr>
-                  <th scope="row">Los Pollos Hermanos</th>
+                  <td scope="row">Los Pollos Hermanos</td>
+                  <td><button type="button" class="btn btn-info" data-toggle="modal"
+                      data-target="#editarTiendaModal" href="ABMProducto.html">Ver</button></td>
                   <td><button type="button" class="btn btn-secondary" data-toggle="modal"
                       data-target="#editarTiendaModal">Editar</button></td>
                   <td><button type="button" class="btn btn-danger" data-toggle="modal"
                       data-target="#eliminarTiendaModal">Eliminar</button></td>
                 </tr>
                 <tr>
-                  <th scope="row">Cocaina</th>
+                  <td scope="row">Cocaina</th>
+                  <td><button type="button" class="btn btn-info" data-toggle="modal"
+                      data-target="#editarTiendaModal">Ver</button></td>
                   <td><button type="button" class="btn btn-secondary" data-toggle="modal"
                       data-target="#editarTiendaModal">Editar</button></td>
                   <td><button type="button" class="btn btn-danger" data-toggle="modal"
@@ -164,6 +169,7 @@
 
   </div>
 
+  <script src="./js/llamados.js"></script>
 </body>
 
 </html>
