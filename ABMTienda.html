@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <title>Productos por Tienda</title>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
@@ -53,18 +53,18 @@
       <div class="col-sm-9">
         <div class="container">
           <div class="container">
-            <h1 class="mx-auto">Productos por tienda</h1>
+            <h1 class="mx-auto">Mis tiendas</h1>
           </div>
           <div class="float-right" id="crearProducto">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearProductoModal">Crear
-              Producto</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearTiendaModal">Nueva tienda
+</button>
           </div>
-          <div class="modal fade" id="crearProductoModal" tabindex="-1" role="dialog"
-            aria-labelledby="crearProductoModalLabel" aria-hidden="true">
+          <div class="modal fade" id="crearTiendaModal" tabindex="-1" role="dialog"
+            aria-labelledby="crearTiendaModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="crearProductoModalLabel">Crear Producto</h5>
+                  <h5 class="modal-title" id="crearTiendaModalLabel">Nueva tienda</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -75,19 +75,11 @@
                       <label for="inputNombre">Nombre</label>
                       <input type="text" class="form-control" id="inputNombre">
                     </div>
-                    <div class="form-group">
-                      <label for="inputPrecio">Precio</label>
-                      <input type="number" class="form-control" id="inputPrecio">
-                    </div>
-                    <div class="form-group">
-                      <label for="inputCantidad">Cantidad</label>
-                      <input type="number" class="form-control" id="inputCantidad">
-                    </div>
                   </form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                  <button type="button" class="btn btn-primary">Crear Producto</button>
+                  <button type="button" class="btn btn-primary">Crear Tienda</button>
                 </div>
               </div>
             </div>
@@ -96,50 +88,40 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th class="ancho-40" scope="col">Nombre</th>
-                  <th class="ancho-20" scope="col">Cantidad</th>
-                  <th class="ancho-20" scope="col">Precio</th>
+                  <th class="ancho-70" scope="col">Nombre</th>
+                  <th class="ancho-10" scope="col"></th>
                   <th class="ancho-10" scope="col"></th>
                   <th class="ancho-10" scope="col"></th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody id="tbody">
                 <tr>
-                  <th scope="row">Harina</th>
-                  <td>30</td>
-                  <td>$65</td>
+                  <td scope="row">Los Pollos Hermanos</td>
+                  <td><button type="button" class="btn btn-info" data-toggle="modal"
+                      data-target="#editarTiendaModal" href="ABMProducto.html">Ver</button></td>
                   <td><button type="button" class="btn btn-secondary" data-toggle="modal"
-                      data-target="#editarProductoModal">Editar</button></td>
+                      data-target="#editarTiendaModal">Editar</button></td>
                   <td><button type="button" class="btn btn-danger" data-toggle="modal"
-                      data-target="#eliminarProductoModal">Eliminar</button></td>
+                      data-target="#eliminarTiendaModal">Eliminar</button></td>
                 </tr>
                 <tr>
-                  <th scope="row">Cocaina</th>
-                  <td>75</td>
-                  <td>$1200</td>
+                  <td scope="row">Cocaina</th>
+                  <td><button type="button" class="btn btn-info" data-toggle="modal"
+                      data-target="#editarTiendaModal">Ver</button></td>
                   <td><button type="button" class="btn btn-secondary" data-toggle="modal"
-                      data-target="#editarProductoModal">Editar</button></td>
+                      data-target="#editarTiendaModal">Editar</button></td>
                   <td><button type="button" class="btn btn-danger" data-toggle="modal"
-                      data-target="#eliminarProductoModal">Eiminar</button></td>
-                </tr>
-                <tr>
-                  <th scope="row">Marihuana</th>
-                  <td>50</td>
-                  <td>$599.99</td>
-                  <td><button type="button" class="btn btn-secondary" data-toggle="modal"
-                      data-target="#editarProductoModal">Editar</button></td>
-                  <td><button type="button" class="btn btn-danger" data-toggle="modal"
-                      data-target="#eliminarProductoModal">Eiminar</button></td>
+                      data-target="#eliminarTiendaModal">Eiminar</button></td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="modal fade" id="editarProductoModal" tabindex="-1" role="dialog"
-            aria-labelledby="editarProductoLabel" aria-hidden="true">
+          <div class="modal fade" id="editarTiendaoModal" tabindex="-1" role="dialog"
+            aria-labelledby="editarTiendaLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="editarProductoLabel">Crear Producto</h5>
+                  <h5 class="modal-title" id="editarTiendaLabel">Crear Producto</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -149,14 +131,6 @@
                     <div class="form-group">
                       <label for="inputNombre">Nombre</label>
                       <input type="text" class="form-control" id="inputNombre">
-                    </div>
-                    <div class="form-group">
-                      <label for="inputPrecio">Precio</label>
-                      <input type="number" class="form-control" id="inputPrecio">
-                    </div>
-                    <div class="form-group">
-                      <label for="inputCantidad">Cantidad</label>
-                      <input type="number" class="form-control" id="inputCantidad">
                     </div>
                   </form>
                 </div>
@@ -168,18 +142,18 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="eliminarProductoModal" tabindex="-1" role="dialog"
-          aria-labelledby="eliminarProductoLabel" aria-hidden="true">
+        <div class="modal fade" id="eliminarTiendaModal" tabindex="-1" role="dialog"
+          aria-labelledby="eliminarTiendaLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="eliminarProductoLabel">Eliminar Producto</h5>
+                <h5 class="modal-title" id="eliminarTiendaLabel">Eliminar Producto</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
-                ¿Estás seguro de querer eliminar este producto?
+                ¿Estás seguro de querer eliminar esta tienda?
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary">No</button>
@@ -195,6 +169,7 @@
 
   </div>
 
+  <script src="./js/llamados.js"></script>
 </body>
 
 </html>
