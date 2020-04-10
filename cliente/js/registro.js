@@ -3,12 +3,14 @@ $('#new').click(function(event){
     var server = 'http://localhost:8080';
     var name = $('#exampleInputName1').val();
     var email = $('#exampleInputEmail1').val();
+    var password = $('#exampleInputPassword1').val();
+    
 
     // si uso $.post y no hace falta especificar el metodo
     $.ajax({
         url: server + "/usuario/crear",
         method: 'post',
-        data: {"nombre": name, "email": email},
+        data: {"nombre": name, "email": email, 'password': password},
         success: function(){
             alert('Usuario creado con exito');
             window.location.href = "index.html";
