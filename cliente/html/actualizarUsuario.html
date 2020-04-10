@@ -7,31 +7,65 @@
     <title>Actualizar Datos</title>   
 </head>
 <body>
-    <header>
-        <h1>Actualizar Datos</h1>
-    </header>
-    <section>
-        <form>
-          <div class="form-group">
-            <label for="exampleInputName1">Nombre y Apellido</label>
-            <input type="text" class="form-control" id="exampleInputName1">
-          </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  <div class="container">
+    <!-- Image and text -->
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html">
+            <img src=".../img/logo.png" width="35" height="30" class="d-inline-block align-top" alt="Logo">
+            Merca2Libre
+            </a>
+            <ul class="nav justify-content-end">
+                <li class="nav-item">
+                <a class="nav-link active" href="#">Iniciar Sesión</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="col-sm-3">
+                <ul class="nav flex-column nav-fill nav-pills">
+                    <li class="nav-item">
+                    <a class="nav-link active" href="#">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Mis tiendas</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Navegar</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
             </div>
-            <!-- <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1">
-            </div> -->
-            <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <div class="col-sm-9">
+              <header>
+                <h1>Actualizar Datos</h1>
+              </header>
+              <section>
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputName1">Nombre y Apellido</label>
+                      <input type="text" class="form-control" id="exampleInputName1">
+                    </div>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <!-- <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div> -->
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+                      <button id="save" class="btn btn-primary">Guardar</button>
+                  </form>
+              </section>
             </div>
-            <button id="save" class="btn btn-primary">Guardar</button>
-        </form>
-    </section>
+        </div>
+
     <footer>
         <h1>Mercad2Libre</h1>
     </footer>
